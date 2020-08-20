@@ -2,7 +2,8 @@ package day2;
 
 import java.util.Scanner;
 
-public class loanCalc {
+public class loanCalc 
+{
        @SuppressWarnings("resource")
 
        public static void main(String[] args) {
