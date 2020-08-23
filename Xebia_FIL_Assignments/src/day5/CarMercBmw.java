@@ -4,9 +4,7 @@ package day5;
 	 public void display(){
 		System.out.println("Display method of Car");
 	}
-	 public void test(){
-		 System.out.println("Display method of Test");
-	 }
+	 
 }
  class Merc extends Car{
 	@Override
