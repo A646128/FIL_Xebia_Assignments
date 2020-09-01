@@ -13,7 +13,6 @@ class missingletters{
 			{
 				int val1=ch[i]+1;
 				char c=(char) val1;
-				// char [] chars = ("" + c).toCharArray();
 				System.out.println(c);
 			}
 			}catch(ArrayIndexOutOfBoundsException e){
