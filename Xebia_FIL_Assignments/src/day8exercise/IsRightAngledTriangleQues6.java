@@ -9,12 +9,12 @@ class Ques6{
 	     {
 	         if((a*a)==(b*b)+(c*c))
 	         {
-	         System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle.");
+	         System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle");
 	         return true;
 	         }
 	         else 
 	         {
-	         System.out.println("This isn't a right angled triangle."); 
+	         System.out.println("This isn't a right angled triangle"); 
 	         return false;
 	         }
 	     }
@@ -22,12 +22,12 @@ class Ques6{
 	        {
 	            if((b*b)==(c*c)+(a*a))
 	            {
-	            System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle.");
+	            System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle");
 	            return true;
 	            }
 		        else 
 		        {
-			    System.out.println("This isn't a right angled triangle."); 
+			    System.out.println("This isn't a right angled triangle"); 
 			    return false;
 			    }
 	         }
@@ -35,12 +35,12 @@ class Ques6{
 	        {
 	            if((c*c)==(a*a)+(b*b))
 	            {
-	            System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle.");
+	            System.out.println("This is the classic example of a " +"\"nice\""+" right angled triangle");
 	            return true;
 	            }
 		        else 
 		        {
-			         System.out.println("This isn't a right angled triangle."); 
+			         System.out.println("This isn't a right angled triangle"); 
 			         return false;
 			    }
 	        }
