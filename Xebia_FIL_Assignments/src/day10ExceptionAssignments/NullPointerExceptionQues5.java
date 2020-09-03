@@ -8,7 +8,7 @@ public class NullPointerExceptionQues5 {
 		obj.toString();
 		}catch(NullPointerException e)
 		{
-			System.out.println("null Object can not be coverted to Sting, Please correct its code.");
+			System.out.println("null Object can not be converted to String, Please correct its code.");
 		}
 
 	}
