@@ -1,12 +1,10 @@
 package day13;
 
-class Company{
+class ProducerConsumer{
 
     int item;
     boolean flag = false;
-    // flag = false it is producer turn
-    // flag = true it is consumer turn
-    synchronized public void produce(int item) throws Exception{
+    synchronized public void producer(int item) throws Exception{
         if(flag){
             wait();
         }
@@ -20,7 +18,7 @@ class Company{
         if(!flag){
             wait();
         }
-        System.out.println("Consumer : "+ item);
+        System.out.println("Consumed : "+ item);
         flag = false;
         notify();
         return this.item;
@@ -29,9 +27,9 @@ class Company{
 }
 
 class Producer extends Thread{
-    Company comp;
+    ProducerConsumer comp;
 
-    Producer(Company c){
+    Producer(ProducerConsumer c){
         this.comp = c;
     }
 
@@ -40,8 +38,8 @@ class Producer extends Thread{
         while (true){
 
             try{
-                this.comp.produce(i);
-                Thread.sleep(1000);
+                this.comp.producer(i);
+                Thread.sleep(2000);
                 i++;
             }catch (Exception e){
 
@@ -51,9 +49,9 @@ class Producer extends Thread{
 }
 
 class Consumer extends Thread{
-    Company comp;
+	ProducerConsumer comp;
 
-    Consumer(Company c){
+    Consumer(ProducerConsumer c){
         this.comp = c;
     }
 
@@ -64,19 +62,16 @@ class Consumer extends Thread{
 
             try{
                 this.comp.consumer();
-                Thread.sleep(3000);
+               Thread.sleep(4000);
             }catch (Exception e){
 
             }
         }
     }
 }
-
-
-
 public class Q3_Thread_ProducerConsumer {
     public static void main(String[] args) {
-        Company comp = new Company();
+    	ProducerConsumer comp = new ProducerConsumer();
         Producer p = new Producer(comp);
         Consumer c = new Consumer(comp);
 
